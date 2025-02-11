@@ -4,18 +4,18 @@ pipeline {
     stages {
 		stage('Restore dependencies') {
             steps {
-                bat 'dotnet restore'
+                bat 'dotnet restore HouseRentingSystem.sln'
             }
         }
 	
         stage('Build') {
             steps {
-                bat 'dotnet build'
+                bat 'dotnet build HouseRentingSystem.sln'
             }
         }
         stage('Test') {
             steps {
-                bat 'dotnet test'
+                bat 'dotnet test HouseRentingSystem.sln'
             }
         }
     }
